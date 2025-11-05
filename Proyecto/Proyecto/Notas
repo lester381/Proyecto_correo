@@ -1,0 +1,33 @@
+23/09
+lean.- para que pueda detectar el usuario agregar una variable que guarde el usuario con el que unicamente iniciaste sesión y luego utilice ese mismo para hacer el envio y la recepción
+lean.- cambiar funciones a clases distintas
+
+13/10
+Ian.- Como punto de partida, arranque con la modularización, creo mas optimo por ahora, separar las clases que deberian de modelar el sistema en un archivo, y en otro el menú intera
+        Agregue a esto, una correcion sobre las clases como lo solicitaba, al menos las del modelo principal
+
+14/10
+Marcos.- ingrese el menu dentro del mismo archivo .py, dandole funcionamiento, por ahora esta creado dentro del mismo archivo, despues lo modularizo
+Marcos.- hablando con Ian corregimos un problema causado por el encapsulamiento de la contraseña. Al intentar iniciar sesion y ser un atributo privado no lograba acceder
+
+15/10
+Ian.- Econtre un error que provocaba que en inicio_sesion() devolviera un error para iniciar sin revisar todos los usuarios registrados
+        Se elimino un else dentro del bucle for que provocaba que solo se revisara el primer usuario
+Ian.- Cambie la validación del usuario para que en lugar de utilizar el nombre, utilice el mail.
+Ian.- Agregue "self.usuario_actual" en el menu para que se mantenga la sesión activa.
+        Con esto tambien se corrigió el cierre de sesión y se agrego una validación para que no se pueda realizar ninguna función (exceptuando crear y listar usuario) sin haber registrado usuarios o tener una sesion activa
+
+16/10
+
+Marcos.- cree la class carpeta, pudiendo enviar mensajes de un correo hacia otro, cambie algunas pequeñas cosas dentro de otras class para que la de carpeta de funcionamiento 
+         agregue dentro de la class usuario def recibir el codigo self.bandeja.agregar_mensaje(msg) para asi poder enviarlos
+Marcos.- cree mas funciones dentro de la class carpeta, agregue opciones al menu para poder interactuar con estas funciones y se pueden mover correctamente mensajes de una carpeta a otra 
+        cabe recalcar que el menu creado no es el definitivo, se creara un submenu para una mejor interaccion con el mismo por el momento queda todo sobre el mismo
+
+01/11
+
+Ian.- Termine de modulizar las clases de manera solicitada
+Ian.- Se emprolijo el menu, diviendose en dos partes, el menu_sesion (donde se realiza el registro e inicio de sesion) y menu_principal, optimizando el funcionamiento del mismo y evitando que solicite una autenticación con cada función
+Ian.- Realize tambien una pequeña infografia mejor y mas prolija, también tiene un diagrama de flujo, luego realizare el diagrama de clases.
+
+
